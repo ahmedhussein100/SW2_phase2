@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'mobiles_list.dart';
 
 
 void main() => runApp(Main());
@@ -13,7 +14,7 @@ class Main extends StatelessWidget {
           primaryColor: Colors.blueAccent,
           scaffoldBackgroundColor: Colors.purple,
         ),
-        home:
+        home:MobileList()
     );
   }
 }
