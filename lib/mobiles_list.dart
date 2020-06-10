@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'Update_mobile.dart';
 import 'database.dart';
 import 'package:flutter/material.dart';
 import 'package:mobileshop/add_mobile.dart';
@@ -98,7 +99,9 @@ class MobileListView extends StatelessWidget {
                               fontSize: 20.0
                           ),
                         ),
-                        onPressed:(){},
+                        onPressed:(){Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => UpdateMobile(documents[position])),
+                        );},
                       ),SizedBox(
                             width: 100,
                           ),

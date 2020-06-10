@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'database.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'mobiles_list.dart';
 
 
 
@@ -29,7 +30,9 @@ class _UpdateMobileState extends State<UpdateMobile>{
           backgroundColor: Colors.redAccent,
           elevation: 0,
 
-          leading: IconButton(icon: Icon(FontAwesomeIcons.arrowLeft), onPressed: () {}),
+          leading: IconButton(icon: Icon(FontAwesomeIcons.arrowLeft), onPressed: () {Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MobileList()),
+          );}),
 
         ),
         body:SingleChildScrollView(child: Form(
@@ -150,6 +153,9 @@ class _UpdateMobileState extends State<UpdateMobile>{
                           );
 
                         }
+                        Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => MobileList()),
+                        );
                       },
                     ),
                   ],

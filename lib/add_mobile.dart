@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mobileshop/database.dart';
 import 'package:mobileshop/mobile_class.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'mobiles_list.dart';
 
 class Add_mobile extends StatelessWidget {
   @override
@@ -16,7 +17,9 @@ class Add_mobile extends StatelessWidget {
           backgroundColor: Colors.redAccent,
           elevation: 0,
 
-          leading: IconButton(icon: Icon(FontAwesomeIcons.arrowLeft), onPressed: () {}),
+          leading: IconButton(icon: Icon(FontAwesomeIcons.arrowLeft), onPressed: () {Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MobileList()),
+          );}),
 
         ),
         body: addMobile(),
@@ -142,7 +145,9 @@ class _AddingFormState extends State<addMobile>{
                 ));
 
               }
-
+              Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MobileList()),
+              );
             },
           ),
         ],
